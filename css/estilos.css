@@ -1,0 +1,79 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1200px;
+
+    padding: 0px;
+
+    font-family: 'Roboto', sans-serif;
+
+    
+
+
+
+}
+h1,h2,h3{
+    font-family: 'Montserrat', sans-serif;
+    color:#05285e;
+    text-align: center;
+    font-size: 2em;
+}
+
+nav.mi-menu{
+   max-width: 1200px; 
+   margin: auto;
+}
+
+nav.mi-menu ul{
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: #fe5c81;
+    color: white;
+    
+}
+
+nav.mi-menu a{
+    padding: 20px;
+    transition: 1s;
+    
+}
+
+nav.mi-menu a:hover{
+    background: white;
+    color: #05285e;;
+    border: 2px solid #05285e;
+}
+
+
+section.slide-section{
+    max-width: 1200px;
+    margin: auto;
+}
+
+section.ofertas{
+    max-width: 1200px;
+    margin:auto;
+    margin-top: 20px;
+}
+
+section.ofertas img{
+    width: 100%;
+}
+
+section.ofertas figure{
+    width: 32%;
+}
+section.ofertas div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+

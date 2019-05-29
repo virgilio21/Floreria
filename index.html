@@ -5,9 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Floreria Pro</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/responsiveslides.css">
+  <link rel="stylesheet" href="./css/demo.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet"> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="./js/responsiveslides.min.js"></script>
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+
+      // Slideshow 4
+      $("#slider4").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        maxwidth: 1200,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+
 </head>
 <body>
+
+
+    <nav class="mi-menu">
+        <ul>
+            <li><a href="#"> Inicio </a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="#">Donde encontrarnos</a></li>
+            <li><a href="#">No se</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="slide-section">
+    <!-- Slideshow 4 -->
+        <div class="callbacks_container">
+            <ul class="rslides" id="slider4">
+            <li>
+                <img src="./images/1.jpg" alt="">
+                
+            </li>
+            <li>
+                <img src="./images/2.jpg" alt="">
+                
+            </li>
+            <li>
+                <img src="./images/3.jpg" alt="">
+                
+            </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="ofertas">
+        <h1>Lo que te ofrecemos</h1>
+        <div>
+            <figure>
+                <img src="./images/ofertas1.jpg" alt="rosados">
+            </figure>
+            <figure>
+                <img src="./images/ofertas2.jpg" alt="rosados2">
+            </figure>
+
+            <figure>
+                    <img src="./images/ofertas3.jpg" alt="rosados3">
+            </figure>
+        </div>
+
+    </section>
+
+    
+
     
 </body>
 </html>
