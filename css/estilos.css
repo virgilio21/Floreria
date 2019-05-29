@@ -3,7 +3,7 @@
 }
 
 body{
-    max-width: 1200px;
+    
 
     padding: 0px;
 
@@ -18,7 +18,7 @@ h1,h2,h3{
     font-family: 'Montserrat', sans-serif;
     color:#05285e;
     text-align: center;
-    font-size: 2em;
+    
 }
 
 nav.mi-menu{
@@ -65,10 +65,19 @@ section.ofertas{
 
 section.ofertas img{
     width: 100%;
+    transition: 1s;
 }
 
 section.ofertas figure{
     width: 32%;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+section.ofertas img:hover{
+
+    transform: scale(1.5);
 }
 section.ofertas div{
     display: flex;
@@ -76,4 +85,96 @@ section.ofertas div{
     flex-wrap: nowrap;
     justify-content: space-around;
 }
+section.ofertas h2{
+    font-size: 16px;
+    font-family: 'Pacifico', cursive;
+    color: #58a9dd;
+    
+    
+}
+
+section.ofertas h2.titulo{
+    font-size: 30px;
+    position: absolute;
+    left: 20px;
+    top: 45%;
+    color: #05285e;
+    font-family: 'Roboto', sans-serif;
+
+    
+}
+section.ofertas h2.subtitulo{
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    top: 60%;
+    color: black;
+    
+}
+
+section.texto-fotos{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section.texto-fotos > *{
+    width: 30%;
+}
+
+section.texto-fotos div{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+h2{
+    margin-bottom: 10px;
+}
+i{
+    color:green;
+    position: relative;
+    left: 48%;
+    margin-bottom: 10px;
+}
+
+#parallaxs{
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/parallax1.jpg");
+    /*
+    background-position: 0px 0px;
+    El eje x es el primer valor, el segundo es el eje y
+    */
+    background-attachment: fixed;
+}
+
+#parallaxs div{
+
+  
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
+
+a.boton{
+    display: inline-block;
+    text-align: center;
+    background: #fe5c81;
+    width: 200px;
+    border-radius: 65px;
+    color:white;
+    padding: 20px 30px; 
+    margin-top: 150px;
+}
+
 

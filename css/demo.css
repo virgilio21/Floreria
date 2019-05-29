@@ -20,7 +20,7 @@ body {
   padding: 20px;
   }
 
-p,h3,h4,pre {
+p,pre {
   text-align: left;
   max-width: 540px;
   margin: 0 auto 20px;
