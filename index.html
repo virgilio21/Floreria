@@ -40,12 +40,21 @@
 <body>
 
 
-    <nav class="mi-menu">
+    <nav class="mi-menu" id="menu">
+            <a href='#' id='oculto'>
+                
+                <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x circulo" ></i>
+                        <i class="fas fa-bars fa-stack-1x"></i>
+                </span>
+            </a>
         <ul>
-            <li><a href="#"> Inicio </a></li>
-            <li><a href="#">Contactanos</a></li>
-            <li><a href="#">Donde encontrarnos</a></li>
-            <li><a href="#">Nuestro equipo</a></li>
+            <li><a href="index.html" > Inicio </a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li><a href="#service" class="btn_ancla">Servicios</a></li>
+            <li><a href="#ofert" class="btn_ancla">Lo que te ofrecemos</a></li>
+            <li><a href="ubicacion.html">Donde encontrarnos</a></li>
+            <li><a href="equipo-per.html">Nuestro equipo</a></li>
         </ul>
     </nav>
 
@@ -71,9 +80,9 @@
 
     </section>
 
-    <section class="ofertas">
-        <h1>Lo que te ofrecemos</h1>
-        <i class="fab fa-pagelines fa-2x"></i>
+    <section class="ofertas" id="service">
+        <h1>Servicios</h1>
+        <i class="fab fa-pagelines fa-2x face fa-stack-1x"></i>
         <div>
             <figure>
                 <img src="./images/ofertas1.jpg" alt="rosados">
@@ -124,8 +133,151 @@
     
     </section>
 
-    
+
+    <section class="job" id="ofert">
+
+        <h1>Lo que te ofrecemos</h1>
+        <i class="fas fa-tree fa-2x face"></i>
+
+        <div class="trabajos">
+
+            <figure class="fotos-inicio">
+                <img src="./images/prod1.jpg" alt="">
+                <figcaption>
+                    <h1>Nuestras plantas exoticas</h1>
+                    <p>Para el desierto o para tu jardin</p>
+                </figcaption>
+            </figure>
+            <figure class="fotos-inicio">
+                <img src="./images/prod2.jpg" alt="">
+                <figcaption>
+                    <h1>Plantaciones de flores</h1>
+                    <p>Un lugar ideal para trabajar</p>
+                </figcaption>
+            </figure>
+            <figure class="fotos-inicio">
+                <img src="./images/prod3.jpg" alt="">
+                <figcaption>
+                    <h1>Jardines</h1>
+                    <p>Que jamas podras olvidar</p>
+                </figcaption>
+            </figure>
+
+            <figure class="fotos-inicio">
+                <img src="./images/prod4.jpg" alt="">
+                <figcaption>
+                    <h1>Flores raras y hermosas</h1>
+                    <p>Nosotros tenemos todo para esa persona especial</p>
+                </figcaption>
+            </figure>
+
+            <figure class="fotos-inicio">
+                <img src="./images/prod8.jpg" alt="">
+                <figcaption>
+                    <h1>Tenemos plantas en todos los lugares</h1>
+                    <p>Hasta en los que no te imaginas</p>
+                </figcaption>
+            </figure>
+
+            <figure class="fotos-inicio">
+                <img src="./images/prod7.jpg" alt="">
+                <figcaption>
+                    <h1>Tulipanes</h1>
+                    <p>¿Que color buscas?</p>
+                </figcaption>
+            </figure>
+
+        </div>
+
+        <a href="#" class="boton" id="Btn">El secreto de los bosques y plantas</a>
+
+    </section>
+
+
+    <footer>
+
+        <h1>¡Que estas esperando contactanos!</h1>
+        <div>        
+            <a href="#"><i class="fab fa-facebook-f fa-2x footer face"></i></a>
+            <a><i class="fab fa-twitter fa-2x footer face"></i></a>
+            <a><i class="fab fa-google fa-2x footer face"></i></a>
+        </div>
+
+    </footer>
 
     
+
+    <script>
+    
+        $(function(){
+
+            var btn_movil = $('#oculto'), mi_menu = $('nav').find('ul');
+            btn_movil.on('click', function(e){
+                e.preventDefault();
+                mi_menu.toggleClass('open-menu');
+            })
+        });
+
+        $(document).ready(function(){
+            $('.ir-arriba').click(function(){
+                $('body, html').animate({
+                    scrollTop:'0px'
+                }, 1000);
+            });
+        })
+
+        $(function(){
+            $(".btn_ancla").click(function(e){
+                e.preventDefault();
+                var ancla = $(this).attr("href");
+                $('html, body').animate({
+                    scrollTop: $(ancla).offset().top
+                }, 1000 );
+
+                $('#menu').find('ul').toggleClass('open-menu');
+            });
+        })
+
+
+    
+    </script>
+
+
+
+
+    <div id="lamascara" class="mascara">
+        <div class="contenido">
+          <span class="cerrar">&times;</span>
+          <h1>El secreto de las plantas</h1>
+          <iframe width="390" height="315" src="https://www.youtube.com/embed/Un2yBgIAxYs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          
+        </div>
+    </div>
+
+    
+
+    <script>
+
+        // FUNCION PARA VENTANA MODAL
+        
+        var mascara = document.getElementById('lamascara');
+        var btn = document.getElementById("Btn");
+        var cerrar = document.getElementsByClassName("cerrar")[0];
+         
+        btn.onclick = function() {
+            mascara.style.display = "block";
+        }
+        cerrar.onclick = function() {
+            mascara.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == mascara) {
+                mascara.style.display = "none";
+            }
+        }
+    </script>
+
+<i class="ir-arriba fas fa-arrow-circle-up fa-3x"></i>
+
 </body>
 </html>

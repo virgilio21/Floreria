@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Floreria Pro</title>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity='sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf' crossorigin='anonymous'>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+</head>
+<body>
+    
+        <nav class="mi-menu" id="menu">
+                <a href='#' id='oculto'>
+                    
+                    <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x circulo" ></i>
+                            <i class="fas fa-bars fa-stack-1x"></i>
+                    </span>
+                </a>
+            <ul>
+                <li><a href="index.html" > Inicio </a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+                <li><a href="ubicacion.html">Donde encontrarnos</a></li>
+                <li><a href="equipo-per.html">Nuestro equipo</a></li>
+            </ul>
+        </nav>
+
+    <section class="contacto">
+            <h1>Detalles de contacto</h1>
+    <div>
+        
+
+        <div class="contenedor-de-papa">
+            <div class="contenedor">
+                
+                <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x circulo" ></i>
+                        <i class="fas fa-map-marker-alt  face fa-stack-1x form"></i>
+                </span>
+
+                
+                <div>
+                    <p>Direccion:</p>
+                    <small>17a 18 y 20 Chablekal</small>
+                </div>
+
+                
+            </div>
+            <div class="contenedor">
+                
+                    <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x circulo" ></i>
+                            <i class="fas fa-phone  face fa-stack-1x form"></i>
+
+                            
+                    </span>
+    
+                    
+                    <div>
+                        <p>Direccion:</p>
+                        <small>17a 18 y 20 Chablekal</small>
+                    </div>
+    
+                    
+            </div>
+            <div class="contenedor">
+                
+                    <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x circulo" ></i>
+                            <i class="far fa-envelope  face fa-stack-1x form"></i>
+                    </span>
+    
+                    
+                    <div>
+                        <p>Direccion:</p>
+                        <small>17a 18 y 20 Chablekal</small>
+                    </div>
+    
+                    
+            </div>
+            <div class="contenedor">
+                
+                    <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x circulo" ></i>
+                            <i class="far fa-clock  face fa-stack-1x form"></i>
+                    </span>
+    
+                    
+                    <div>
+                        <p>Direccion:</p>
+                        <small>17a 18 y 20 Chablekal</small>
+                    </div>
+    
+                    
+            </div>
+         </div>
+
+         <form action="correo.php" method="POST">
+
+
+            <input type="text" placeholder="¿Cual es tu nombre" name="nombre">
+
+            <input type="email" placeholder="Tu correo electronico" name="correo">
+
+            <input type="tel" placeholder="Tu numero telefonico" name="telefono">
+
+            <textarea name="area" id="" cols="30" rows="10" placeholder="¿Que estas buscando?"></textarea>
+
+            <input type="submit" value="Enviar" class="envio">
+         </form>
+    </div>
+    
+    </section>
+
+    <footer>
+
+            <h1>¡Que estas esperando contactanos!</h1>
+            <div>        
+                <a href="#"><i class="fab fa-facebook-f fa-2x footer face"></i></a>
+                <a><i class="fab fa-twitter fa-2x footer face"></i></a>
+                <a><i class="fab fa-google fa-2x footer face"></i></a>
+            </div>
+    
+    </footer>
+    <i class="ir-arriba fas fa-arrow-circle-up fa-3x"></i>
+
+    <script>
+    
+            $(function(){
+    
+                var btn_movil = $('#oculto'), mi_menu = $('nav').find('ul');
+                btn_movil.on('click', function(e){
+                    e.preventDefault();
+                    mi_menu.toggleClass('open-menu');
+                })
+            });
+    
+            $(document).ready(function(){
+                $('.ir-arriba').click(function(){
+                    $('body, html').animate({
+                        scrollTop:'0px'
+                    }, 1000);
+                });
+            })
+    
+            $(function(){
+                $(".btn_ancla").click(function(e){
+                    e.preventDefault();
+                    var ancla = $(this).attr("href");
+                    $('html, body').animate({
+                        scrollTop: $(ancla).offset().top
+                    }, 1000 );
+    
+                    $('#menu').find('ul').toggleClass('open-menu');
+                });
+            })
+    
+    
+        
+        </script>
+
+    
+</body>
+</html>
