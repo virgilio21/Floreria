@@ -11,4 +11,6 @@
 
     mail($destino_correo, "Info", $mensaje);
 
+    header('Location:index.html');
+
 ?>
